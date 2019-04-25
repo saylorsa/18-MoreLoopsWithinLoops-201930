@@ -136,7 +136,7 @@ def run_test_largest_negative_number():
     print('Expected and actual are:', expected, answer)
 
     # Test 4:
-    expected =
+    expected = -0.01
     answer = largest_negative_number([(3, -1, 4),
                                      (13, 10, 11, 7, 10),
                                      [1, 2, 3, 4],
@@ -166,14 +166,27 @@ def largest_negative_number(seq_seq):
     where each subsequence contains only numbers.
     """
     # -------------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #
     # CHALLENGE: Try to solve this problem with no additional sequences
     #   being constructed (so the SPACE allowed is limited to the
     #   give sequence of sequences plus any non-list variables you want).
     # -------------------------------------------------------------------------
-
+    list = []
+    for i in range(len(seq_seq)):
+        if seq_seq[i] != []:
+            seq = seq_seq[i]
+            for j in range(len(seq)):
+                if seq[j] < 0:
+                    list = list + [seq[j]]
+    if list != []:
+        k_for_max = 0
+        for k in range(1, len(list)):
+            if list[k] > list[k_for_max]:
+                k_for_max = k
+        return list[k_for_max]
+    return None
 
 def run_test_first_is_elsewhere_too():
     """ Tests the    first_is_elsewhere_too    function. """
