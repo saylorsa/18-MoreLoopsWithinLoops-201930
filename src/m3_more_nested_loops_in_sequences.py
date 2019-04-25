@@ -107,7 +107,7 @@ def largest_number(seq_seq):
 def run_test_largest_negative_number():
     """ Tests the    largest_negative_number    function. """
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement this TEST function.
+    # DONE: 4. Implement this TEST function.
     #   It TESTS the  largest_negative_number  function defined below.
     #
     #   Include enough tests to give you confidence that your solution
@@ -118,6 +118,30 @@ def run_test_largest_negative_number():
     print('Testing the   LARGEST_NEGATIVE_NUMBER   function:')
     print('-------------------------------------------------')
 
+    # Test 1:
+    expected = -2.6
+    answer = largest_negative_number([(30, -5, 8, -20),
+                                      (100, -2.6, 88, -40, -5),
+                                      (400, 500)])
+    print('Expected and actual are:', expected, answer)
+
+    # Test 2:
+    expected = None
+    answer = largest_negative_number([(200, 2, 20), (500, 400)])
+    print('Expected and actual are:', expected, answer)
+
+    # Test 3:
+    expected = None
+    answer = largest_negative_number(([], [], []))
+    print('Expected and actual are:', expected, answer)
+
+    # Test 4:
+    expected =
+    answer = largest_negative_number([(3, -1, 4),
+                                     (13, 10, 11, 7, 10),
+                                     [1, 2, 3, 4],
+                                     (17, 4, -0.01)])
+    print('Expected and actual are:', expected, answer)
 
 def largest_negative_number(seq_seq):
     """
