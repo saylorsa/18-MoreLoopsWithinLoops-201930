@@ -81,9 +81,27 @@ def largest_number(seq_seq):
     where each subsequence contains only numbers.
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # -------------------------------------------------------------------------
+    list = []
+    for i in range(len(seq_seq)):
+        if seq_seq[i] != []:
+            seq = seq_seq[i]
+            j_for_max = 0
+            for j in range(1,len(seq)):
+                if seq[j]>seq[j_for_max]:
+                    j_for_max = j
+            list = list + [seq[j_for_max]]
+    if list != []:
+        k_for_max = 0
+        for k in range(1,len(list)):
+            if list[k]>list[k_for_max]:
+                k_for_max = k
+        return list[k_for_max]
+    return None
+
+
 
 
 def run_test_largest_negative_number():
