@@ -18,7 +18,7 @@ def main():
 def run_test_largest_number():
     """ Tests the    largest_number    function. """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement this TEST function.
+    # DONE: 2. Implement this TEST function.
     #   It TESTS the  largest_number  function defined below.
     #   Include at least ** 1 ** ADDITIONAL test beyond those we wrote.
     # -------------------------------------------------------------------------
@@ -44,7 +44,15 @@ def run_test_largest_number():
     answer = largest_number(([], [], []))
     print('Expected and actual are:', expected, answer)
 
-    # TODO 2 (continued): Add your ADDITIONAL test(s) here:
+    # DONE 2 (continued): Add your ADDITIONAL test(s) here:
+
+    # Test 4:
+    expected = 17
+    answer = largest_number([(3, 1, 4),
+                             (13, 10, 11, 7, 10),
+                             [1, 2, 3, 4],
+                             (17, 4, 0)])
+    print('Expected and actual are:', expected, answer)
 
 
 def largest_number(seq_seq):
