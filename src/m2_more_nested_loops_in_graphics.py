@@ -61,7 +61,7 @@ def draw_upside_down_wall(rectangle, n, window):
                 rec = rectangle.clone()
                 rec.move_by((k-l)*(-width/2),-height*(l+k))
                 rec.attach_to(window)
-                window.render()
+    window.render()
 
 
 # -----------------------------------------------------------------------------
